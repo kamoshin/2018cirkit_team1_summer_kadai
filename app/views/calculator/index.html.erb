@@ -1,0 +1,23 @@
+<h1>Calculator#calculation</h1>
+<p>※計算したい食材にチェックを入れてください</p>
+<table>
+  <tr>
+    <th>チェック欄</th>
+    <th>名前</th>
+    <th>画像</th>
+    <th>kcal</th>
+    <th colspan="2"></th>
+  </tr>
+  <%= form_tag calculator_index_path(id: @foodstuff) do %>
+    <% @foodstuffs.each do |food| %>
+    <tr>
+      <td><%= food.id %></td>
+      <td><%= food.name %></td>
+      <td><%= food.image %></td>
+      <td><%= food.kcal %></td>
+    </tr>
+    <%= submit_tag "計算する" %>
+    <% end %>
+  <% end %>
+</table>
+<p class="link"><a href="/foodstuffs/add/">新しいデータを入力</a></p>

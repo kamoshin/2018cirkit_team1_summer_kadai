@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Foodstuffs</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'foodstuffs', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'foodstuffs.js', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="foodstuff">
+    <%= yield %>
+  </body>
+</html>

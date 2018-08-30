@@ -1,0 +1,24 @@
+<h1>Foodstuff#index</h1>
+<p>※現在登録されているデータの一覧です</p>
+<table>
+  <tr>
+    <th>名前</th>
+    <th>画像</th>
+    <th>kcal</th>
+    <th colspan="2"></th>
+  </tr>
+  <% sum = 0%>
+  <% @foodstuffs.each do |obj| %>
+  <tr>
+    <td><%= obj.name %></td>
+    <td><%= obj.image %></td>
+    <td><%= obj.kcal %></td>
+    <td><a href="/foodstuffs/edit/<%= obj.id %>">編集</a></td>
+    <td><a href="javascript:window.delData(<%= (obj.id.to_s + ",'".to_s + obj.name.to_s)
+    .html_safe %>');">削除</a></td>
+    <% sum = sum + obj.kcal %>
+  </tr>
+  <% end %>
+  <p>総カロリー:<%= sum %>kcal</p>
+</table>
+<p class="link"><a href="/foodstuffs/add/">新しいデータを入力</a></p>
