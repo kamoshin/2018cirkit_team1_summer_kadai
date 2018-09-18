@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'foodstuffs/index'
+  root 'foodstuffs#index'
   get 'foodstuffs', to: 'foodstuffs#index'
 
   get 'foodstuffs/add'
@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   get 'foodstuffs/select'
   post 'foodstuffs/select'
 
-  
+
 end
