@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   get 'foodstuffs/select'
   post 'foodstuffs/select'
 
+  resources :users
 
 end
