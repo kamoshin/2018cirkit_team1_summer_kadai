@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2018_08_09_062806) do
   create_table "foodstuffs", force: :cascade do |t|
     t.text "name"
     t.string "image"
-    t.integer "kcal"
+    t.integer "kcal", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

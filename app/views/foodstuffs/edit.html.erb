@@ -1,4 +1,6 @@
+<header>
 <h1>Foodstuff#edit</h1>
+</header>
 <p>※登録する食材のデータを入力して下さい</p>
 <table>
   <%= form_for(@foodstuff, url:{controller:'foodstuffs', action:'edit', id:@foodstuff.id}) do |form| %>
